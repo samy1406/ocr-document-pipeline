@@ -1,0 +1,5 @@
+opencv-python
+Pillow
+deskew
+pytesseract
+pdf2image
