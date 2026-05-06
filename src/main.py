@@ -1,16 +1,16 @@
 import preprocessor
 import ocr_engine
-import postprocess
+import postprocessor
 
 def postprocess_text(text):
-    cleaned = postprocess.clean_text(text)
+    cleaned = postprocessor.clean_text(text)
     
     return {
-        "date": postprocess.extract_date(cleaned),
-        "address": postprocess.extract_address(cleaned),
-        "products": postprocess.extract_product_names(cleaned),
-        "descriptions": postprocess.extract_line_item_descriptions(cleaned),
-        "prices": postprocess.extract_prices(cleaned)
+        "date": postprocessor.extract_date(cleaned),
+        "address": postprocessor.extract_address(cleaned),
+        "products": postprocessor.extract_product_names(cleaned),
+        "descriptions": postprocessor.extract_line_item_descriptions(cleaned),
+        "prices": postprocessor.extract_prices(cleaned)
     }
 
 def process_document(file_path):

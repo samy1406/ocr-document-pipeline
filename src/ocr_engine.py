@@ -1,4 +1,5 @@
 import pytesseract
+pytesseract.pytesseract.tesseract_cmd = r'/usr/bin/tesseract'  # ← here
 from pdf2image import convert_from_path
 
 def image_to_text(image):
